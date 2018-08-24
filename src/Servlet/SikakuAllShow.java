@@ -17,14 +17,14 @@ import DTO.SikakuDTO;
 /**
  * Servlet implementation class SearchServlet
  */
-@WebServlet("/AllShow")
-public class AllShow extends HttpServlet {
+@WebServlet("/SikakuAllShow")
+public class SikakuAllShow extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AllShow() {
+    public SikakuAllShow() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,7 +36,7 @@ public class AllShow extends HttpServlet {
 		ArrayList<SikakuDTO> AList = AllShowDAO.SikakuAllShow();
 		request.setAttribute("a", AList);
 
-		String view = "/WEB-INF/view/allshow.jsp";
+		String view = "/WEB-INF/view/sikakuallshow.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
 	}

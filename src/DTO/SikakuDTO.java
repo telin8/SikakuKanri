@@ -1,7 +1,5 @@
 package DTO;
 
-import java.util.Date;
-
 public class SikakuDTO {
 	private int studentId;
 	private String studentName;
@@ -12,7 +10,7 @@ public class SikakuDTO {
 	private String ExamDate;
 	private String Sof;
 
-	public SikakuDTO(int studentId, String studentName, int studentAge, String studentGender, int sikakuId, String sikakuName, String sikakuLevel, String Sof, Date examDate){
+	public SikakuDTO(int studentId, String studentName, int studentAge, String studentGender){
 		this.studentId = studentId;
 		this.studentName = studentName;
 		this.studentAge = studentAge;

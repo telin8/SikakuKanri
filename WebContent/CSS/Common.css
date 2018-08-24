@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-image:url(../image/p_da0602_m_da06027.jpg);
+    background-image:url(../image/pinkzarazara.gif);
 	background-repeat: repeat;
 }
 header{
@@ -33,4 +33,7 @@ header{
 common{
     text-align: center;
     font-size: 150%;
+}
+#button{
+    font-size: 120%;
 }
