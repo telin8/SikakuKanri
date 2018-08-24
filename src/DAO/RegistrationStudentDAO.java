@@ -64,7 +64,7 @@ public class RegistrationStudentDAO {
 					con.close();
 				}
 			} catch (SQLException e){
-				System.out.println("DB切断時にエラーが発生しました。");
+				System.out.println("DB切断時にエラーが発生しました。。");
 				e.printStackTrace();
 			}
 		}
