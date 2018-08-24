@@ -5,15 +5,15 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import DTO.SikakuDTO;
 
-public class RegistrationDataDAO {
+public class AllShowDAO {
 
-	public static SikakuDTO RegistrationData(int sikakuId, String sikakuName, String examDate, String Sof){
+	public static ArrayList<SikakuDTO> SikakuAllShow(){
 
-		SikakuDTO result = null;
-
+		ArrayList<SikakuDTO> AList = new ArrayList<SikakuDTO>();
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -25,16 +25,20 @@ public class RegistrationDataDAO {
 					"root",
 					"pkp12345");
 
-			String sql = "insert into sikaku values(?, ?, ?, ?);";
+			String sql = "Select * from Sikaku;";
 
 			pstmt = con.prepareStatement(sql);
 
-			pstmt.setInt(1, sikakuId);
-			pstmt.setString(2, sikakuName);
-			pstmt.setString(3, examDate);
-			pstmt.setString(4, Sof);
+			rs = pstmt.executeQuery();
 
-			pstmt.executeUpdate();
+			while(rs.next()){
+				int sikakuId = rs.getInt("sikakuId");
+				String sikakuName = rs.getString("sikakuName");
+				String examDate = rs.getString("examDate");
+				String sof = rs.getString("sof");
+				SikakuDTO dis = new SikakuDTO(sikakuId, sikakuName, examDate, sof);
+				AList.add(dis);
+			}
 
 		} catch (SQLException e){
 			System.out.println("DBアクセスに失敗しました。");
@@ -68,7 +72,7 @@ public class RegistrationDataDAO {
 				e.printStackTrace();
 			}
 		}
-		return result;
+		return AList;
 	}
 
 }

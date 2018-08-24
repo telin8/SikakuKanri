@@ -1,6 +1,8 @@
+
 package Servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,19 +11,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import DAO.RegistrationDataDAO;
+import DAO.AllShowDAO;
+import DTO.SikakuDTO;
 
 /**
  * Servlet implementation class SearchServlet
  */
-@WebServlet("/RegistrationDataResult")
-public class RegistrationDataResult extends HttpServlet {
+@WebServlet("/AllShow")
+public class AllShow extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegistrationDataResult() {
+    public AllShow() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,17 +33,10 @@ public class RegistrationDataResult extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ArrayList<SikakuDTO> AList = AllShowDAO.SikakuAllShow();
+		request.setAttribute("a", AList);
 
-
-		String sikakuID = request.getParameter("sikakuid");
-		String sikakuName = request.getParameter("sikakuname");
-		String examDate = request.getParameter("examdate");
-		String Sof = request.getParameter("sof");
-		int sikakuId = Integer.parseInt(sikakuID);
-
-
-		RegistrationDataDAO.RegistrationData(sikakuId,sikakuName,examDate,Sof);
-		String view = "/WEB-INF/view/registrationdataresult.jsp";
+		String view = "/WEB-INF/view/allshow.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
 	}

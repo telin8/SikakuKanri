@@ -9,20 +9,21 @@ public class SikakuDTO {
 	private String studentGender;
 	private int sikakuId;
 	private String sikakuName;
-	private String sikakuLevel;
-	private Date ExamDate;
+	private String ExamDate;
 	private String Sof;
 
-	public SikakuDTO(int studentId, String studentName, int studentAge, String studentGender, int sikakuId, String sikakuName, String sikakuLevel, String Sof){
+	public SikakuDTO(int studentId, String studentName, int studentAge, String studentGender, int sikakuId, String sikakuName, String sikakuLevel, String Sof, Date examDate){
 		this.studentId = studentId;
 		this.studentName = studentName;
 		this.studentAge = studentAge;
 		this.studentGender = studentGender;
+
+	}
+	public SikakuDTO(int sikakuId, String sikakuName, String ExamDate, String Sof){
 		this.sikakuId = sikakuId;
 		this.sikakuName = sikakuName;
-		this.sikakuLevel = sikakuLevel;
+		this.ExamDate = ExamDate;
 		this.Sof = Sof;
-
 	}
 
 	public int getStudentId() {
@@ -61,25 +62,20 @@ public class SikakuDTO {
 	public void setSikakuName(String sikakuName) {
 		this.sikakuName = sikakuName;
 	}
-	public String getSikakuLevel() {
-		return sikakuLevel;
-	}
-	public void setSikakuLevel(String sikakuLevel) {
-		this.sikakuLevel = sikakuLevel;
-	}
+
 	public String getSof() {
 		return Sof;
 	}
-	public void setSof(String sof) {
-		Sof = sof;
+	public void setSof(String Sof) {
+		this.Sof = Sof;
 	}
 
-	public Date getExamDate() {
+	public String getExamDate() {
 		return ExamDate;
 	}
 
-	public void setExamDate(Date examDate) {
-		ExamDate = examDate;
+	public void setExamDate(String ExamDate) {
+		this.ExamDate = ExamDate;
 	}
 
 

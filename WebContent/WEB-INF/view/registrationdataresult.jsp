@@ -1,12 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<LINK REL="stylesheet" href="/SikakuKanri/CSS/Common.css" type="text/css"/>
+<meta charset="UTF-8">
+<title>登録完了</title>
 </head>
+<header>
+<p id="title">資格取得状況管理システム</p>
+</header>
 <body>
-
+<div id="item">
+<p>新規登録完了しました。</p>
+</div>
+<footer>
+<a href="/SikakuKanri/RegistrationData" >戻る</a>
+</footer>
 </body>
 </html>
