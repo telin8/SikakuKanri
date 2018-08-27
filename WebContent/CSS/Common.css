@@ -22,6 +22,10 @@ header{
 	margin-right: auto;
 }
 
+#subtitle{
+    font-size: 180%;
+    background-color: #E0F2F7;
+}
 #item{
     text-align: center;
     margin-right: auto;
@@ -37,3 +41,4 @@ common{
 #button{
     font-size: 120%;
 }
+

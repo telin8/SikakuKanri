@@ -9,16 +9,16 @@
 <LINK REL="stylesheet" href="/SikakuKanri/CSS/Common.css"
 	type="text/css" />
 <meta charset="UTF-8">
-<title>一覧表示</title>
 </head>
 <header>
-	<p id="title">資格管理システム</p>
+	<p id="title">資格取得状況管理システム</p>
 </header>
 <body>
 	<div id="item">
+	<p id="subtitle">受験一覧表示</p>
 		<table border="1" id="table">
 			<tr id="table">
-				<th>資格ＩＤ</th>
+				<th>受験番号</th>
 				<th>資格名</th>
 				<th>受験日</th>
 				<th>合否</th>

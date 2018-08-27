@@ -13,7 +13,7 @@
 </header>
 <body>
 	<div id="item">
-		<p>新規登録完了しました。</p>
+		<p>削除完了しました。</p>
 	</div>
 	<footer>
 		<a href="/SikakuKanri/SikakuMain">戻る</a>

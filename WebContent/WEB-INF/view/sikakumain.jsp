@@ -19,11 +19,15 @@
 		<button type="button" onclick="location.href='StudentAllShow'"
 			id="button">学生一覧</button>
 		<br>
+			<button type="button" onclick="location.href='RegistrationData'"
+			id="button">資格登録</button>
+		<br>
 		<button type="button" onclick="location.href='RegistrationStudent'"
 			id="button">学生登録</button>
 		<br>
-		<button type="button" onclick="location.href='RegistrationData'"
-			id="button">資格登録</button>
+
+		<button type="button" onclick="location.href='DeleteStudent'"
+			id="button">データ削除</button>
 		<br>
 	</div>
 	<footer> </footer>

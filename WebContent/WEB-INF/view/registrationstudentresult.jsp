@@ -16,7 +16,7 @@
 		<p>新規登録完了しました。</p>
 	</div>
 	<footer>
-		<a href="/SikakuKanri/SikakuKanri">戻る</a>
+		<a href="/SikakuKanri/SikakuMain">戻る</a>
 	</footer>
 </body>
 </html>

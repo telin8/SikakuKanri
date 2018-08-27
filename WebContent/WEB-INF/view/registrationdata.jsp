@@ -13,9 +13,9 @@
 </header>
 <body>
 	<form action="RegistrationDataResult" method="get" id="item">
-		<p>新規登録</p>
+		<p id="subtitle">新規登録</p>
 		<p>
-			資格番号：<input type="text" name="sikakuid">
+			受験番号：<input type="text" name="sikakuid">
 		</p>
 		<p>
 			資格名：<input type="text" name="sikakuname">

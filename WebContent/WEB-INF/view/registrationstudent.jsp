@@ -13,7 +13,7 @@
 </header>
 <body>
 	<form action="RegistrationStudentResult" method="get" id="item">
-		<p>新規登録</p>
+		<p id="subtitle">新規登録</p>
 		<p>
 			学籍番号：<input type="text" name="studentid">
 		</p>
